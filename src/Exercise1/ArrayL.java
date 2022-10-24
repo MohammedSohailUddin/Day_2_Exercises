@@ -1,11 +1,9 @@
 package Exercise1;
-
 //Integer ArrayList
 import java.util.*;
 
 public class ArrayL {
 public static void main(String[] args) {
-	  
 List<Integer> myList = new ArrayList<Integer>();
 myList.add(1);
 myList.add(2);
@@ -31,7 +29,6 @@ System.out.println("Updated List: "+ myList);
 //	[1, 2, 3, 4, 5]
 //	3rd Element is: 3
 //	Updated List: [1, 2, 9, 4, 5]
-
 
 
 //String ArrayList
