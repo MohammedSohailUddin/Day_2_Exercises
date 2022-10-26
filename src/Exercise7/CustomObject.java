@@ -7,53 +7,18 @@ public class CustomObject {
 
 	public static void main(String[] args) {
 
-		Map<String, String> myMap = new HashMap<String, String>();
+		Map<Customer, String> myMap = new HashMap<Customer, String>();
 		
-		myMap.put("James Gosling ", " Java");
-		myMap.put("Bjourn Stroustup ", " C++");
-		myMap.put("Denish Ritche ", " C");
+		myMap.put(new Customer("Jack","35"),"1987");
+		myMap.put(new Customer("Arun","23"),"1999");
+		myMap.put(new Customer("Abdul","46"),"1976");
 
-		System.out.println(myMap);
-
-		myMap.forEach((key, value) -> System.out.println(key + " => " + value));
+		myMap.forEach((key, value) -> System.out.println(key + " & " + "DoB: "+value));
 
 	}
 }
 
-
 //Output:
-//	
-//	{Bjourn Stroustup = C++, Denish Ritche = C, James Gosling = Java}
-//		Bjourn Stroustup  =>  C++
-//		Denish Ritche  =>  C
-//		James Gosling  =>  Java
-
-
-
-
-//unable to get book object
-
-//package Exercise7;
-//
-//import java.util.HashMap;
-//import java.util.Map;
-//import Exercise7.Book;
-//
-//public class CustomObject {
-//
-//	public static void main(String[] args) {
-//
-//		Map<Book, String> myMap = new HashMap<Book, String>();
-//		
-//		myMap.put(new Book("James Gosling", "Java"),"Java");
-//		myMap.put(new Book("Bjourn Stroustup", "C++"),"C++");
-//		myMap.put(new Book("Denish Ritche", "C"),"C");
-//
-//		System.out.println(myMap);
-//
-//		myMap.forEach((key, value) -> System.out.println(key + " => " + value));
-//
-//	}
-//}
-//
-//Output:
+//[Customer Name: Abdul, Customer Age 46] & DoB: 1976
+//[Customer Name: Jack, Customer Age 35] & DoB: 1987
+//[Customer Name: Arun, Customer Age 23] & DoB: 1999
