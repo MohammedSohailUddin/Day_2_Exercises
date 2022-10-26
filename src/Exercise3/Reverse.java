@@ -1,50 +1,46 @@
 package Exercise3;
+import java.util.Comparator;
 import java.util.TreeSet;
-import java.util.Iterator;
+
+class MyNameComparator implements Comparator<Employee>
+{
+	public int compare(Employee e1, Employee e2)
+	{
+		return e1.getName().compareTo(e2.getName());
+	}
+}
+
   public class Reverse {
   public static void main(String[] args) {
 
-	  TreeSet<String> t_set = new TreeSet<String>();
-          t_set.add("Red");
-          t_set.add("Green");
-          t_set.add("Black");
-          t_set.add("Pink");
-          t_set.add("orange");
+	  TreeSet<Employee> set = new TreeSet<Employee>(new MyNameComparator());
+          set.add(new Employee("Red",23,2000L));
+          set.add(new Employee("Green",33,3000L));
+          set.add(new Employee("Black",43,4000L));
+          set.add(new Employee("Pink",53,5000L));
+          set.add(new Employee("Orange",63,6000L));
 
-     System.out.println("Original tree set:" + t_set);  
-     Iterator<String> it = t_set.descendingIterator();
-     System.out.println("Elements in Reverse Order:");
-     while (it.hasNext()) {
-        System.out.print(it.next()+" ");
+          TreeSet<Employee> setReverseView =
+                  (TreeSet<Employee>)set.descendingSet();
+       
+              System.out.println("Normal View: "+set);
+              System.out.println("Reverse View: "+setReverseView);
      }
   }
-}
-  
-//  Output:
-//	  
-//  Original tree set:[Black, Green, Pink, Red, orange]
-//  Elements in Reverse Order:
-//  orange Red Pink Green Black 
 
   
+//Output:
   
-//unable to get employee object
-  
-//import java.util.TreeSet;
-//import java.util.Iterator;
-//import Exercise3.Employee;
-//  public class Reverse {
-//  public static void main(String[] args) {
-//     TreeSet<Employee> t_set = new TreeSet<Employee>();
-//          t_set.add(new Employee("ABC", 30, 4000L));
-//          t_set.add(new Employee("MNO", 40, 5000L));
-//          t_set.add(new Employee("PQR", 50, 6000L));
-//          t_set.add(new Employee("XYZ", 60, 7000L));
-//   System.out.println("Original tree set:" + t_set);  
-//     Iterator<Employee> it = t_set.descendingIterator();
-//     System.out.println("Elements in Reverse Order:");
-//     while (it.hasNext()) {
-//        System.out.println(it.next());
-//     }
-//  }
-//}
+//Normal View:
+// [Employee [name: Black, age: 43, salary: 4000], 
+//  Employee [name: Green, age: 33, salary: 3000], 
+//  Employee [name: Orange, age: 63, salary: 6000], 
+//  Employee [name: Pink, age: 53, salary: 5000], 
+//  Employee [name: Red, age: 23, salary: 2000]]
+//		  
+//Reverse View: 
+// [Employee [name: Red, age: 23, salary: 2000], 
+//  Employee [name: Pink, age: 53, salary: 5000], 
+//  Employee [name: Orange, age: 63, salary: 6000], 
+//  Employee [name: Green, age: 33, salary: 3000], 
+//  Employee [name: Black, age: 43, salary: 4000]]
