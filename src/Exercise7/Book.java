@@ -1,61 +1,31 @@
 package Exercise7;
 
-public class Book {
+public class Customer {
 
-	private String title;
-	private String author;
+	private String CustomerName;
+	private String CustomerAge;
 
-	public Book(String title, String author) {
+	public Customer(String CustomerName, String CustomerAge) {
 		super();
-		this.title = title;
-		this.author = author;
+		this.CustomerName = CustomerName;
+		this.CustomerAge = CustomerAge;
 	}
 
-	public String getTitle() {
-		return title;
+	public String getCustomerName() {
+		return CustomerName;
 	}
-	public void setTitle(String title) {
-		this.title = title;
+	public void setCustomerName(String CustomerName) {
+		this.CustomerName = CustomerName;
 	}
 
-	public String getAuthor() {
-		return author;
+	public String getCustomerAge() {
+		return CustomerAge;
 	}
-	public void setAuthor(String author) {
-		this.author = author;
+	public void setCustomerAge(String CustomerAge) {
+		this.CustomerAge = CustomerAge;
 	}
-//	@Override
-//	public int hashCode() {
-//		final int prime = 31;
-//		int result = 1;
-//		result = prime * result + ((author == null) ? 0 : author.hashCode());
-//		result = prime * result + ((title == null) ? 0 : title.hashCode());
-//		return result;
-//	}
-//
-//	@Override
-//	public boolean equals(Object obj) {
-//		if (this == obj)
-//			return true;
-//		if (obj == null)
-//			return false;
-//		if (getClass() != obj.getClass())
-//			return false;
-//		Book other = (Book) obj;
-//		if (author == null) {
-//			if (other.author != null)
-//				return false;
-//		} else if (!author.equals(other.author))
-//			return false;
-//		if (title == null) {
-//			if (other.title != null)
-//				return false;
-//		} else if (!title.equals(other.title))
-//			return false;
-//		return true;
-//	}
 	@Override
 	public String toString() {
-		return "Book [title=" + title + ", author=" + author + "]";
+		return "[Customer Name: " + CustomerName + ", Customer Age: " + CustomerAge + "]";
 	}
 }
