@@ -23,7 +23,7 @@ class MyNameComparator implements Comparator<Employee>
           TreeSet<Employee> setReverseView =
                   (TreeSet<Employee>)set.descendingSet();
        
-              System.out.println("Normal View: "+set);
+              System.out.println("Sorted By Name View: "+set);
               System.out.println("Reverse View: "+setReverseView);
      }
   }
