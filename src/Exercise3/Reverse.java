@@ -31,7 +31,7 @@ class MyNameComparator implements Comparator<Employee>
   
 //Output:
   
-//Normal View:
+//Sorted By Name View:
 // [Employee [name: Black, age: 43, salary: 4000], 
 //  Employee [name: Green, age: 33, salary: 3000], 
 //  Employee [name: Orange, age: 63, salary: 6000], 
